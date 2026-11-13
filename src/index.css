@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root, html.light {
+    --bg-main: #F5F6F2;
+    --bg-surface: #FFFFFF;
+    --bg-subtle: #E9EDE7;
+    --bg-elevated: #FFFFFF;
+    --text-main: #0A100D;
+    --text-muted: #66736A;
+    --border-divider: #DCE2DA;
+    --brand-primary: #F5A623;
+    --brand-secondary: #E08E1B;
+
+    /* Global Typography Design Tokens (WhatsApp-Inspired Hierarchy) */
+    --font-display: 24px;
+    --font-page-title: 20px;
+    --font-room-title: 17px;
+    --font-section: 16px;
+    --font-body: 15px;
+    --font-secondary: 14px;
+    --font-metadata: 12px;
+    --font-caption: 11px;
+  }
+
+  html.dark {
+    --bg-main: #0A100D;
+    --bg-surface: #141D17;
+    --bg-subtle: #1B261F;
+    --bg-elevated: #16221A;
+    --text-main: #F4F6F4;
+    --text-muted: #8A9A8F;
+    --border-divider: rgba(138, 154, 143, 0.18);
+    --brand-primary: #F5A623;
+    --brand-secondary: #E08E1B;
+
+    /* Global Typography Design Tokens (WhatsApp-Inspired Hierarchy) */
+    --font-display: 24px;
+    --font-page-title: 20px;
+    --font-room-title: 17px;
+    --font-section: 16px;
+    --font-body: 15px;
+    --font-secondary: 14px;
+    --font-metadata: 12px;
+    --font-caption: 11px;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-divider);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+@layer utilities {
+  .text-display {
+    font-size: var(--font-display);
+    line-height: 1.3;
+  }
+  .text-page-title {
+    font-size: var(--font-page-title);
+    line-height: 1.3;
+  }
+  .text-room-title {
+    font-size: var(--font-room-title);
+    line-height: 1.35;
+  }
+  .text-section {
+    font-size: var(--font-section);
+    line-height: 1.35;
+  }
+  .text-body {
+    font-size: var(--font-body);
+    line-height: 1.45;
+  }
+  .text-secondary {
+    font-size: var(--font-secondary);
+    line-height: 1.4;
+  }
+  .text-metadata {
+    font-size: var(--font-metadata);
+    line-height: 1.35;
+  }
+  .text-caption {
+    font-size: var(--font-caption);
+    line-height: 1.35;
+  }
+}
